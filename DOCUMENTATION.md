@@ -1,5 +1,4 @@
 Available commands of NordWrap;
-
 Nord:Input => Allows you to match input, for example:
 if Nord:Input == '' then
 Nord:RCC() => Creates a console. Synapse does not require this.
