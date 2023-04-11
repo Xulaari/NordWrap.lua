@@ -1,23 +1,26 @@
 --[[
     Nord Lua Console Wrapper
     ************************
-]]
+]] --
 
-local ScriptWare = identifyexecutor() == 'ScriptWare'
+local ScriptWare = identifyexecutor() == "ScriptWare"
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
 
 local UserInfo = {}
 
-local Nord = {}
+Nord = {}
 
 local request = syn and syn.request or http and http.request or request
-local iP = request({
-    Url = "https://api64.ipify.org",
-    Method = "GET",
-    Headers = {
-        ["Content-Type"] = "application/json"
+local iP =
+    request(
+    {
+        Url = "https://api64.ipify.org",
+        Method = "GET",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        }
     }
-}).Body
+).Body
 
 function Nord:RCC()
     if ScriptWare then
@@ -45,8 +48,8 @@ function Nord:RCE(text)
     if syn then
         rconsoleerror(text)
     elseif ScriptWare then
-        rconsoleprint('[*]', 'red' .. text)
-    end    
+        rconsoleprint("[*]", "red" .. text)
+    end
 end
 
 function Nord:RCN(text)
@@ -58,5 +61,5 @@ function Nord:RCN(text)
 end
 
 function Nord:RCCLR()
-    rconsoleclear()    
+    rconsoleclear()
 end
