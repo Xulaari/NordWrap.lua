@@ -65,3 +65,7 @@ end
 function Nord:RCCLR()
     rconsoleclear()
 end
+
+function Nord:Input()
+    rconsoleinput()
+end
