@@ -26,4 +26,4 @@ Nord:RCP([[
 Nord:RCW('This is a warning.\n')
 Nord:RCP('Your IP Is ' .. iP .. 'And HWID Is ' .. HWID)
 ```
-Loadstring: `loadstring(game:HttpGet("https://raw.githubusercontent.com/Xulaari/NordWrap.lua/main/NordWrap.lua",true))()`
+Paste in the source code for now.
