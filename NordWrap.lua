@@ -1,11 +1,12 @@
 --[[
     Nord Lua Console Wrapper
     ************************
+    KNOWN:
+    Slow Performance.
 ]] --
 
 local ScriptWare = identifyexecutor() == "ScriptWare"
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
-local Nord:Input() = rconsoleinput()
 
 local UserInfo = {}
 
