@@ -7,10 +7,9 @@
 
 local ScriptWare = identifyexecutor() == "ScriptWare"
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+local input = rconsoleinput()
 
 local UserInfo = {}
-
-Nord = {}
 
 local request = syn and syn.request or http and http.request or request
 local iP =
@@ -24,13 +23,13 @@ local iP =
     }
 ).Body
 
-function Nord:RCC()
+function RCC()
     if ScriptWare then
         rconsolecreate()
     end
 end
 
-function Nord:RCP(text, color)
+function RCP(text, color)
     if syn then
         rconsoleprint(text)
     elseif ScriptWare then
@@ -38,7 +37,7 @@ function Nord:RCP(text, color)
     end
 end
 
-function Nord:RCW(text)
+function RCW(text)
     if syn then
         rconsolewarn(text)
     elseif ScriptWare then
@@ -46,7 +45,7 @@ function Nord:RCW(text)
     end
 end
 
-function Nord:RCE(text)
+function RCE(text)
     if syn then
         rconsoleerror(text)
     elseif ScriptWare then
@@ -54,7 +53,7 @@ function Nord:RCE(text)
     end
 end
 
-function Nord:RCN(text)
+function RCN(text)
     if syn then
         rconsolename(text)
     elseif ScriptWare then
@@ -62,10 +61,6 @@ function Nord:RCN(text)
     end
 end
 
-function Nord:RCCLR()
+function RCCLR()
     rconsoleclear()
-end
-
-function Nord:Input()
-    rconsoleinput()
 end
